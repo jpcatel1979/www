@@ -1,0 +1,14 @@
+<sites>
+    <site id="1">
+        <title>Google</title>
+        <url>http://www.google.fr</url>
+    </site>
+    <site id="2">    
+        <title>Free</title>
+        <url>http://www.free.fr</url>
+    </site>
+    <site id="3">    
+        <title>Mediaforma</title>
+        <url>http://www.mediaforma.com</url>
+    </site>
+</sites>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Isac assimov</title>
+        <script src="js/jquerry.js"></script>
+        <style>
+        div{
+            width: 400px;
+            height: 300px;
+            border: 2px solid dodgerblue;
+            background: powderblue;
+        }
+        </style>
+    </head>
+    <body>
+      <p>les lois de la robotique</p>
+      <button id=1>Loi 1</button>
+      <button id=law2>Loi 2</button>
+      <button id=law3>Loi 3</button>
+      <button id=lire>Lecture</button>
+
+
+      <div id=res>
+
+      </div>
+       <script>
+        $(function(){
+            $('button').click(function(){
+                $.ajax({
+                    type:"GET",
+                    url: "donnees.php?choix=#id",
+                    dataType: "html",
+                    success: function(law){
+                        $("#res").html(law);
+                    },
+                    error :function(){
+                        $("#res").html("error");
+                    },
+                    timeout : 3000
+                });
+            });
+        });
+          
+       
+       
+       </script>
+    </body>   
+</html>

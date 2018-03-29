@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="js/jquerry.js"></script>
+        <title>exo3 tableau</title>
+        <style>
+            table{
+                width:300px;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <script>
+        
+         </script>  
+         <table>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>4</td>
+
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>4</td>
+
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>4</td>
+
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>4</td>
+
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>4</td>
+
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>4</td>
+
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>4</td>
+
+            </tr>
+            <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>4</td>
+    
+                </tr>
+         </table>
+         <script>
+             $(function(){
+                 // une ligne sur deux
+             //   $('table tr:even').css('background','#FAB');
+             //une ligne sur trois   
+             //  $('tr:nth-child(3n)').css('background','#FAB');
+               //une colone sur deux 
+            //  $('tr td:even').css('background','#FAB');
+               //une case sur deux
+              // $('tr:even td:nth-child(even)').css('background','#FAB');
+             //  $('tr:odd td:nth-child(odd)').css('background','#FAB');
+                //colorie toutes les lignes sauf la derniere 
+            $('tr:not(tr:last)').css('background','#FAB');
+
+             });
+         </script>
+
+    </body>   
+</html>

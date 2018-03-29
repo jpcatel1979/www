@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lecture BDD</title>
+        <script src="js/jquerry.js"></script>
+        <style>
+        div{
+            width: 400px;
+            height: 900px;
+            border: 2px solid dodgerblue;
+            background: powderblue;
+        }
+        table{
+            width: 100%;
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+      <p>lecture de la base</p>
+      <button id=lire>Lecture</button>
+
+
+      <div id=res>
+
+      </div>
+       <script>
+        $(function(){
+            $('button').click(function(){
+                $.ajax({
+                    type:"GET",
+                    url: "interrogation.php",
+                    dataType: "html",
+                    success: function(data){
+                        $("#res").html(data);
+                    },
+                    error :function(){
+                        $("#res").html("error");
+                    },
+                    timeout : 3000
+                });
+            });
+        });
+          
+       
+       
+       </script>
+    </body>   
+</html>

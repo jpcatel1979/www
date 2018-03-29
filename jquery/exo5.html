@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Insertion de contenu dans le DOM</title>
+    <script src="js/jquery.js"></script>
+  </head>
+  <body>
+        <h2>Partie 1</h2>
+        <p>Latius iam disseminata licentia onerosus bonis omnibus Caesar nullum post haec adhibens modum orientis latera cuncta vexabat nec honoratis parcens nec urbium primatibus nec plebeiis.</p>
+        <ul>
+          <li>un</li>
+          <li>deux</li>
+          <li>trois</li>
+          <li>quatre</li>
+        </ul>
+        <hr>
+        <h2>Partie 2</h2>
+        <p>Illud autem non dubitatur quod cum esset aliquando virtutum omnium domicilium Roma, ingenuos advenas plerique nobilium, ut Homerici bacarum suavitate Lotophagi, humanitatis multiformibus officiis retentabant.</p>
+        <ul>
+          <li>premier</li>
+          <li>deuxième</li>
+          <li>troisième</li>
+        </ul>  
+        <hr>ricam pro consule regeret Carthaginiensibus victus inopia iam lassatis, ex horreis Romano populo destinatis frumentum dedit, pauloque postea cum provenisset segetum copia, integre sine ulla restituit mora.</p>
+ 
+    <script>
+        $(function() {
+            //$('hr').replaceWith('<br>');
+            //$('p').replaceWith('ceci est un texte via jquery');
+            
+            $('ul').after('<ol>');
+            $('ul').each(function(){
+                $(this).next().html($(this).html());
+            });
+            $('ul').remove();
+            //remplacer h2 par h1
+            $('h2').after('<h1>');
+            $('h2').each(function(){
+                $(this).next().html($(this).html());
+            });
+            $('h2').remove();
+
+        }); 
+    </script>
+  </body>
+</html>

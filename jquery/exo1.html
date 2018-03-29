@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="js/jquerry.js"></script>
+        <title>exo1</title>
+     
+      
+    </head>
+
+    <body>
+        <script>
+         $(function(){
+          //  $('ul').css('background','yellow');
+        //  $('ul.bleu').css('background','yellow');
+     //   $('div ul').css('background','yellow');
+    //    $('div ul li.impair').css('background', 'yellow');
+          // $('ol li').css('background', 'yellow');
+          // toute les li qui ont une class
+    //      $('li[class]').css('background','yellow');
+    //surligne le 4éme li dont la class est impair
+         // $('li[class=impair]:eq(3)').css('background','yellow');
+                $('li:even:gt(1)').css('background', 'cyan');
+             //   $('li:gt(1):even').css('background', 'green');
+
+         });   
+          
+        </script>
+        <ul class="rouge">
+            <li class="impair">Liste à puces 1 : élément 1</li>
+            <li class="pair">Liste à puces 1 : élément 2</li>
+            <li class="impair">Liste à puces 1 : élément 3</li>
+            <li class="pair">Liste à puces 1 : élément 4</li>
+            <li class="impair">Liste à puces 1 : élément 5</li>
+        </ul>
+        <div>
+            <ul class="bleu">
+                <li class="impair">Liste à puces 2 : élément 1</li>
+                <li class="pair">Liste à puces 2 : élément 2</li>
+                <li class="impair">Liste à puces 2 : élément 3</li>
+            </ul>
+        </div>
+        <ol class="rouge">
+            <li>Liste numérotée : élément 1</li>
+            <li>Liste numérotée : élément 2</li>
+            <li>Liste numérotée : élément 3</li>
+        </ol>
+    </body>   
+</html>

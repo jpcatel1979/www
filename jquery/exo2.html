@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="js/jquerry.js"></script>
+        <title>exo2</title>
+        <style>
+        img{
+            width: 300px;
+        }
+        </style>
+    </head>
+    <body>
+        <img src="images/montagne.jpg" title="paysage montagne" border="4px">
+        <img src="images/desert.jpg" title="paysage desert" border="4px">
+        <img src="images/mer.jpg" title="paysage mer enfants plage" border="4px">
+        <img src="images/glace.jpg" title="glace"  border="4px">
+        
+   
+        <script>
+            $(function() {
+                $('img[title*="paysage"]').css('border-color','blue');
+            }); 
+         </script>   
+    </body>   
+</html>

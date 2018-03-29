@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Isac assimov</title>
+        <script src="js/jquerry.js"></script>
+        <style>
+        div{
+            width: 400px;
+            height: 300px;
+            border: 2px solid dodgerblue;
+            background: powderblue;
+        }
+        </style>
+    </head>
+    <body>
+      <p>les lois de la robotique</p>
+      <button id=law1>Loi 1</button>
+      <button id=law2>Loi 2</button>
+      <button id=law3>Loi 3</button>
+      <button id=lire>Lecture</button>
+
+
+      <div id=res>
+
+      </div>
+       <script>
+        $(function(){
+            // methode get
+            /*$('#law1').click(function(){
+                $.get('donnees.php?choix=1' , function(data){
+                    $('#res').html(data);   
+                });
+            });
+            $('#law2').click(function(){
+                $.get('donnees.php?choix=2' , function(data){
+                    $('#res').html(data);   
+                });
+            });
+            $('#law3').click(function(){
+                $.get('donnees.php?choix=3' , function(data){
+                    $('#res').html(data);   
+                });
+            });*/
+            // method post
+            $('#law1').click(function(){
+                $.post('donnees_post.php' , {choix:1}, function(data){
+                    $('#res').html(data);   
+                });
+            });
+            $('#law2').click(function(){
+                $.post('donnees_post.php' , {choix:2}, function(data){
+                    $('#res').html(data);   
+                });
+            });
+            $('#law3').click(function(){
+                $.post('donnees_post.php' , {choix:3}, function(data){
+                    $('#res').html(data);   
+                });
+            });
+            $('#lire').click(function(){
+                $.getJSON('employe.json', function(data){
+                    var employe =   data.Prenom + ' '+ 
+                                    data.Nom + ' '+
+                                    data.Age;
+                    $('#res').html(employe);   
+                });
+            });
+         });   
+          
+       
+       
+       </script>
+    </body>   
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ajax et jquerry</title>
+        <script src="js/jquerry.js"></script>
+        <style>
+        div{
+            width: 800px;
+            height: 600px;
+            border: 2px solid dodgerblue;
+            background: powderblue;
+        }
+        </style>
+    </head>
+    <body>
+        <button id=b1>p1</button>
+        <button id=b2>p2</button>
+        <button id=b3>p3</button>
+
+        <script>
+         $(function(){
+            $('#tx').click(function(){
+              $('#res').load('txt/lipsum.txt');    
+            })
+            $('#img').click(function(){
+                $('#res').load('images/img.html');   
+            })
+            $('#b1').click(function(){
+                $('#res').load('messages/error.html #p1');   
+            })
+            $('#b2').click(function(){
+                $('#res').load('messages/error.html #p2');   
+            }) 
+            $('#b3').click(function(){
+                $('#res').load('messages/error.html #p3');   
+            })
+
+         });   
+          
+
+        </script>
+        <div id=res>
+
+        </div>
+        <button id=tx>
+            Texte
+        </button>
+        <button id=img>
+            Image
+        </button>
+         <button id=img>
+            Image
+        </button>
+
+
+    </body>   
+</html>

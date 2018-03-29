@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="js/jquerry.js"></script>
+        <title>exo4 span</title>
+        <style>
+            div{
+                width:550px;
+            }
+            table{
+                width:550px;
+                height: 350px;
+                border:1px solid black ;
+            }
+        
+        </style>
+    </head>
+    <body>
+       <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <table id=tableau></table>    
+
+         <script>
+             $('span').each(function(index){
+                $(this).html(index + 1);
+
+             });
+             $('table').each(function(data){
+                for(var i = 0; i<10; i++)
+                    $(this).append('<tr></tr>');
+            });
+
+            $('tr').each(function(data){
+                for(var i = 0; i<16; i++)
+                    $(this).append('<td></td>');
+            });
+            $('td').each(function(index){
+                $(this).append('#'+('0'+index.toString(16)).slice(-2));
+
+            });
+
+         </script>
+
+    </body>   
+</html>
